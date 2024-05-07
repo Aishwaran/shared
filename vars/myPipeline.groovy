@@ -15,7 +15,7 @@ def call() {
                         sh 'npm install'
                     }
                 }
-           // }
+            }
             // stage ('SonarQube Analysis') {
             //     steps {
             //         script { 
