@@ -9,13 +9,13 @@ def call() {
                      }
                  }
              }
-            stage ('Build') {
-                  steps {
-                    script {
-                        sh 'npm install'
-                    }
-                }
-            }
+            //stage ('Build') {
+                //  steps {
+                  //  script {
+                    //    sh 'npm install'
+                 //   }
+              //  }
+           // }
             // stage ('SonarQube Analysis') {
             //     steps {
             //         script { 
