@@ -39,7 +39,7 @@ def call() {
                  steps {
                      script {
                          withCredentials([string(credentialsId: 'dockerPass', variable: 'dockerPassword')]) {
-                             sh "docker login -u aishwaran -p ${Aishace@2000}"
+                             sh "docker login -u aishwaran -p Aishace@2000"
                              sh 'docker push aishwaran/multi:v2'
                              sh 'docker rmi aishwaran/multi:v2'
                          }
