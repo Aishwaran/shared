@@ -9,13 +9,13 @@ def call() {
                      }
                  }
              }
-            //stage ('Build') {
-                //  steps {
-                  //  script {
-                    //    sh 'npm install'
-                 //   }
-              //  }
-           // }
+            stage ('Build') {
+                  steps {
+                    script {
+                        sh 'npm install'
+                    }
+                }
+            }
             // stage ('SonarQube Analysis') {
             //     steps {
             //         script { 
@@ -35,17 +35,17 @@ def call() {
                     }
                 }
             }
-            stage('Docker Push') {
-                 steps {
-                     script {
-                         withCredentials([string(credentialsId: 'dockerPass', variable: 'dockerPassword')]) {
-                             sh "docker login -u aishwaran -p Aishace@2000"
-                             sh 'docker push aishwaran/multi:v2'
-                             sh 'docker rmi aishwaran/multi:v2'
-                         }
-                     }
-                 }
-             }
+            //stage('Docker Push') {
+                // steps {
+                     //script {
+                         //withCredentials([string(credentialsId: 'dockerPass', variable: 'dockerPassword')]) {
+                             //sh "docker login -u aishwaran -p Aishace@2000"
+                             //sh 'docker push aishwaran/multi:v2'
+                             //sh 'docker rmi aishwaran/multi:v2'
+                         //}
+                     //}
+                 //}
+             //}
             // stage('Deploy on k8s') {
             //     steps {
             //         script {
